@@ -1,0 +1,265 @@
+/* Deals Page Styles */
+.deals-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.deals-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.deals-header h1 {
+    font-size: 32px;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+
+.deals-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.deals-categories {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.category-btn {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #0f1111;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.category-btn:hover {
+    background: #ffd64f;
+    border-color: #ffd64f;
+}
+
+.category-btn.active {
+    background: #ffd64f;
+    border-color: #ffd64f;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.deal-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.deal-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #cc0c39;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 2;
+}
+
+.deal-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+.deal-info {
+    padding: 20px;
+}
+
+.deal-info h3 {
+    font-size: 16px;
+    color: #0f1111;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.price-info {
+    margin-bottom: 10px;
+}
+
+.current-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0f1111;
+    margin-right: 10px;
+}
+
+.original-price {
+    font-size: 16px;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.deal-time {
+    font-size: 14px;
+    color: #cc0c39;
+    font-weight: 500;
+}
+
+.deals-footer {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.deals-footer h2 {
+    font-size: 28px;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+
+.deals-footer p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.newsletter-signup {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.email-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: #ffd64f;
+    box-shadow: 0 0 0 2px rgba(255, 214, 79, 0.2);
+}
+
+.signup-btn {
+    background: #ffd64f;
+    color: #0f1111;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background: #f4c430;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .deals-container {
+        margin: 10px;
+        padding: 0 10px;
+    }
+
+    .deals-header {
+        padding: 30px 15px;
+    }
+
+    .deals-header h1 {
+        font-size: 28px;
+    }
+
+    .deals-categories {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .category-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .deals-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .deals-footer {
+        padding: 30px 20px;
+    }
+
+    .newsletter-signup {
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .deals-header h1 {
+        font-size: 24px;
+    }
+
+    .deals-header p {
+        font-size: 16px;
+    }
+
+    .deals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deal-card img {
+        height: 150px;
+    }
+
+    .deals-footer h2 {
+        font-size: 24px;
+    }
+
+    .current-price {
+        font-size: 18px;
+    }
+
+    .original-price {
+        font-size: 14px;
+    }
+}

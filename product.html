@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Amazon</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./product.css">
+</head>
+<body>
+    <div class="loading-spinner" id="loadingSpinner"></div>
+
+    <nav>
+        <a href="/"><img src="./assets/amazon_logo.png" width="100" alt="Amazon Logo"></a>
+        <div class="nav-country">
+            <img src="./assets/location_icon.png" height="20" alt="Location">
+            <div>
+                <p>Deliver to</p>
+                <h1>United Kingdom</h1>
+            </div>
+        </div>
+        <div class="nav-search">
+            <div class="nav-search-category">
+                <p>All</p>
+                <img src="./assets/dropdown_icon.png" height="12" alt="Dropdown">
+            </div>
+            <input type="text" class="nav-search-input" placeholder="Search Amazon" aria-label="Search Amazon">
+            <button class="nav-search-icon" aria-label="Search">
+                <img src="./assets/search_icon.png" alt="Search">
+            </button>
+        </div>
+        <div class="nav-language">
+            <img src="./assets/us_flag.png" width="25px" alt="US Flag">
+            <p>EN</p>
+            <img src="./assets/dropdown_icon.png" width="8px" alt="Dropdown">
+        </div>
+        <div class="nav-texts">
+            <p><a href="/login.html">Hello, sign in</a></p>
+            <h1>Account & Lists <img src="./assets/dropdown_icon.png" width="8px" alt="Dropdown"> </h1>
+        </div>
+        <div class="nav-texts">
+            <p>Returns</p>
+            <h1>& Orders</h1>
+        </div>
+        <a href="/login.html" class="mobile-user-icon" style="display: none;">
+            <img src="./assets/user.png" alt="User">
+        </a>
+        <a href="/cart.html" class="nav-cart">
+            <img src="./assets/cart_icon.png" width="35px" alt="Cart">
+            <h4>Cart</h4>
+        </a>
+    </nav>
+
+    <div class="nav-bottom">
+        <div class="menu-toggle">
+            <img src="./assets/menu_icon.png" width="25px" alt="Menu">
+            <p>All</p>
+        </div>
+        <p class="nav-item"><a href="/deals.html">Today's Deals</a></p>
+        <p class="nav-item"><a href="/products.html">All Products</a></p>
+        <p class="nav-item"><a href="/customer-service.html">Customer Service</a></p>
+        <p class="nav-item"><a href="/registry.html">Registry</a></p>
+        <p class="nav-item"><a href="/gift-cards.html">Gift Cards</a></p>
+        <p class="nav-item"><a href="/sell.html">Sell</a></p>
+    </div>
+
+    <div class="product-container">
+        <div class="product-images">
+            <div class="main-image-container">
+                <img id="mainImage" src="" alt="Product Image" class="main-image">
+                <div class="image-zoom" id="imageZoom"></div>
+            </div>
+            <div class="thumbnail-images" id="thumbnailImages">
+                <!-- Thumbnails will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h1 id="productName" class="product-title"></h1>
+            <div class="product-rating">
+                <div class="stars" id="productStars"></div>
+                <span id="productRating"></span>
+                <span id="productReviews"></span>
+            </div>
+            <div class="product-price-section">
+                <span class="current-price" id="currentPrice"></span>
+                <span class="original-price" id="originalPrice"></span>
+                <span class="discount" id="discount"></span>
+            </div>
+            <div class="product-features" id="productFeatures">
+                <!-- Features will be populated by JavaScript -->
+            </div>
+            <div class="product-description" id="productDescription"></div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <select id="quantity" name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <button id="addToCartBtn" class="add-to-cart-btn">Add to Cart</button>
+                <button id="addToWishlistBtn" class="add-to-wishlist-btn">
+                    <span id="wishlistText">Add to Wishlist</span>
+                </button>
+            </div>
+            <div class="product-shipping">
+                <h3>Shipping & Returns</h3>
+                <ul>
+                    <li>Free shipping on orders over $25</li>
+                    <li>30-day return policy</li>
+                    <li>Fast delivery within 2-3 business days</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="related-products">
+        <h2>Related Products</h2>
+        <div class="products" id="relatedProducts">
+            <!-- Related products will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <footer>
+        <img src="./assets/amazon_logo.png" width="100" alt="Amazon Logo">
+        <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+
+    <script src="./auth.js"></script>
+    <script src="./productData.js"></script>
+    <script src="./product.js"></script>
+</body>
+</html>

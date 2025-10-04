@@ -1,0 +1,347 @@
+/* Sell Page Styles */
+.sell-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.sell-header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.sell-header h1 {
+    font-size: 32px;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+
+.sell-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.sell-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.sell-option {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sell-option:hover {
+    border-color: #ffd64f;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.sell-option.featured {
+    border-color: #ffd64f;
+    transform: scale(1.02);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffd64f;
+    color: #0f1111;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.sell-option h2 {
+    font-size: 24px;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0f1111;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.features-list li {
+    padding: 8px 0;
+    color: #0f1111;
+    font-size: 16px;
+}
+
+.sell-btn {
+    background: #ffd64f;
+    color: #0f1111;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.sell-btn:hover {
+    background: #f4c430;
+    transform: scale(1.02);
+}
+
+.featured-btn {
+    background: #0f1111;
+    color: white;
+}
+
+.featured-btn:hover {
+    background: #333;
+}
+
+.sell-benefits {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.sell-benefits h2 {
+    font-size: 28px;
+    color: #0f1111;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    border-color: #ffd64f;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.benefit-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    font-size: 18px;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.sell-process {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.sell-process h2 {
+    font-size: 28px;
+    color: #0f1111;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.process-step {
+    text-align: center;
+    padding: 20px;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #ffd64f;
+    color: #0f1111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.process-step h3 {
+    font-size: 20px;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.sell-resources {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.sell-resources h2 {
+    font-size: 28px;
+    color: #0f1111;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.resource-card {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #ffd64f;
+}
+
+.resource-card:hover {
+    border-color: #ffd64f;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateX(5px);
+}
+
+.resource-card h3 {
+    font-size: 18px;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.resource-link {
+    color: #007185;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+    color: #0f1111;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sell-container {
+        margin: 10px;
+        padding: 0 10px;
+    }
+
+    .sell-header {
+        padding: 30px 15px;
+    }
+
+    .sell-header h1 {
+        font-size: 28px;
+    }
+
+    .sell-options {
+        grid-template-columns: 1fr;
+    }
+
+    .sell-option {
+        padding: 30px;
+    }
+
+    .sell-benefits,
+    .sell-process,
+    .sell-resources {
+        padding: 25px;
+    }
+
+    .benefits-grid,
+    .process-steps,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .sell-header h1 {
+        font-size: 24px;
+    }
+
+    .sell-header p {
+        font-size: 16px;
+    }
+
+    .sell-option h2 {
+        font-size: 20px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    .sell-benefits h2,
+    .sell-process h2,
+    .sell-resources h2 {
+        font-size: 24px;
+    }
+
+    .benefit-card h3,
+    .process-step h3,
+    .resource-card h3 {
+        font-size: 16px;
+    }
+}

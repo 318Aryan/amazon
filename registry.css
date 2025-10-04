@@ -1,0 +1,232 @@
+/* Registry Page Styles */
+.registry-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.registry-header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.registry-header h1 {
+    font-size: 32px;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+
+.registry-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.registry-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.registry-type-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.registry-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: #ffd64f;
+}
+
+.registry-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.registry-type-card h2 {
+    font-size: 24px;
+    color: #0f1111;
+    margin-bottom: 15px;
+}
+
+.registry-type-card p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.registry-btn {
+    background: #ffd64f;
+    color: #0f1111;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.registry-btn:hover {
+    background: #f4c430;
+    transform: scale(1.05);
+}
+
+.registry-features {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.registry-features h2 {
+    font-size: 28px;
+    color: #0f1111;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: #ffd64f;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.registry-help {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.registry-help h2 {
+    font-size: 28px;
+    color: #0f1111;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.help-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.help-item {
+    padding: 25px;
+    border-left: 4px solid #ffd64f;
+    background: #f8f9fa;
+    border-radius: 0 8px 8px 0;
+}
+
+.help-item h3 {
+    font-size: 20px;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+
+.help-item p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.help-link {
+    color: #007185;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.help-link:hover {
+    color: #0f1111;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registry-container {
+        margin: 10px;
+        padding: 0 10px;
+    }
+
+    .registry-header {
+        padding: 30px 15px;
+    }
+
+    .registry-header h1 {
+        font-size: 28px;
+    }
+
+    .registry-types {
+        grid-template-columns: 1fr;
+    }
+
+    .registry-features,
+    .registry-help {
+        padding: 25px;
+    }
+
+    .features-grid,
+    .help-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .registry-header h1 {
+        font-size: 24px;
+    }
+
+    .registry-header p {
+        font-size: 16px;
+    }
+
+    .registry-type-card h2 {
+        font-size: 20px;
+    }
+
+    .registry-features h2,
+    .registry-help h2 {
+        font-size: 24px;
+    }
+
+    .feature-card h3,
+    .help-item h3 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Amazon</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./products.css">
+</head>
+<body>
+    <div class="loading-spinner" id="loadingSpinner"></div>
+
+    <nav>
+        <a href="/"><img src="./assets/amazon_logo.png" width="100" alt="Amazon Logo"></a>
+        <div class="nav-country">
+            <img src="./assets/location_icon.png" height="20" alt="Location">
+            <div>
+                <p>Deliver to</p>
+                <h1>United Kingdom</h1>
+            </div>
+        </div>
+        <div class="nav-search">
+            <div class="nav-search-category">
+                <p>All</p>
+                <img src="./assets/dropdown_icon.png" height="12" alt="Dropdown">
+            </div>
+            <input type="text" class="nav-search-input" placeholder="Search Amazon" aria-label="Search Amazon" id="searchInput">
+            <button class="nav-search-icon" aria-label="Search" id="searchBtn">
+                <img src="./assets/search_icon.png" alt="Search">
+            </button>
+        </div>
+        <div class="nav-language">
+            <img src="./assets/us_flag.png" width="25px" alt="US Flag">
+            <p>EN</p>
+            <img src="./assets/dropdown_icon.png" width="8px" alt="Dropdown">
+        </div>
+        <div class="nav-texts">
+            <p><a href="/login.html">Hello, sign in</a></p>
+            <h1>Account & Lists <img src="./assets/dropdown_icon.png" width="8px" alt="Dropdown"> </h1>
+        </div>
+        <div class="nav-texts">
+            <p>Returns</p>
+            <h1>& Orders</h1>
+        </div>
+        <a href="/login.html" class="mobile-user-icon" style="display: none;">
+            <img src="./assets/user.png" alt="User">
+        </a>
+        <a href="/cart.html" class="nav-cart">
+            <img src="./assets/cart_icon.png" width="35px" alt="Cart">
+            <h4>Cart</h4>
+        </a>
+    </nav>
+
+    <div class="nav-bottom">
+        <div class="menu-toggle">
+            <img src="./assets/menu_icon.png" width="25px" alt="Menu">
+            <p>All</p>
+        </div>
+        <p class="nav-item"><a href="/deals.html">Today's Deals</a></p>
+        <p class="nav-item"><a href="/products.html">All Products</a></p>
+        <p class="nav-item"><a href="/customer-service.html">Customer Service</a></p>
+        <p class="nav-item"><a href="/registry.html">Registry</a></p>
+        <p class="nav-item"><a href="/gift-cards.html">Gift Cards</a></p>
+        <p class="nav-item"><a href="/sell.html">Sell</a></p>
+    </div>
+
+    <div class="products-container">
+        <div class="filters-sidebar">
+            <h3>Filters</h3>
+
+            <div class="filter-section">
+                <h4>Category</h4>
+                <div class="filter-options" id="categoryFilters">
+                    <!-- Categories will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Price Range</h4>
+                <div class="price-range">
+                    <input type="range" id="priceRange" min="0" max="500" value="500">
+                    <div class="price-display">
+                        <span>$0</span> - <span id="maxPrice">$500</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Rating</h4>
+                <div class="filter-options" id="ratingFilters">
+                    <label><input type="radio" name="rating" value="all" checked> All Ratings</label>
+                    <label><input type="radio" name="rating" value="4"> 4+ Stars</label>
+                    <label><input type="radio" name="rating" value="3"> 3+ Stars</label>
+                    <label><input type="radio" name="rating" value="2"> 2+ Stars</label>
+                </div>
+            </div>
+
+            <button id="clearFilters" class="clear-filters-btn">Clear All Filters</button>
+        </div>
+
+        <div class="products-main">
+            <div class="products-header">
+                <h2 id="productsTitle">All Products</h2>
+                <div class="products-controls">
+                    <select id="sortSelect" class="sort-select">
+                        <option value="default">Sort by: Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Customer Rating</option>
+                        <option value="newest">Newest Arrivals</option>
+                    </select>
+                    <div class="view-toggle">
+                        <button id="gridView" class="view-btn active">Grid</button>
+                        <button id="listView" class="view-btn">List</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+
+            <div class="products-pagination" id="pagination">
+                <!-- Pagination will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <img src="./assets/amazon_logo.png" width="100" alt="Amazon Logo">
+        <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+
+    <script src="./auth.js"></script>
+    <script src="./productData.js"></script>
+    <script src="./products.js"></script>
+</body>
+</html>

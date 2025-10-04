@@ -1,0 +1,284 @@
+/* Order Success Page Styles */
+.success-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.success-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.success-icon {
+    margin-bottom: 30px;
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    background: #00a650;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    animation: checkmarkAnimation 0.6s ease-in-out;
+}
+
+@keyframes checkmarkAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-content h1 {
+    font-size: 32px;
+    color: #0f1111;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.success-message {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.order-info {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.order-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-detail:last-child {
+    border-bottom: none;
+}
+
+.order-detail .label {
+    font-weight: 500;
+    color: #0f1111;
+}
+
+.order-detail .value {
+    color: #888;
+    font-weight: 600;
+}
+
+.order-items {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.order-items h3 {
+    font-size: 20px;
+    color: #0f1111;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.items-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.order-item-details {
+    flex: 1;
+}
+
+.order-item-name {
+    font-weight: 500;
+    color: #0f1111;
+    margin-bottom: 5px;
+}
+
+.order-item-price {
+    color: #888;
+    font-size: 14px;
+}
+
+.order-item-quantity {
+    color: #888;
+    font-size: 14px;
+}
+
+.next-steps {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.next-steps h3 {
+    font-size: 20px;
+    color: #0f1111;
+    margin-bottom: 15px;
+}
+
+.next-steps ul {
+    list-style: none;
+    padding: 0;
+}
+
+.next-steps li {
+    padding: 8px 0;
+    color: #0f1111;
+    position: relative;
+    padding-left: 25px;
+}
+
+.next-steps li:before {
+    content: "•";
+    color: #00a650;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    min-width: 150px;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #ffd64f;
+    color: #0f1111;
+}
+
+.btn-primary:hover {
+    background: #f4c430;
+}
+
+.btn-secondary {
+    background: white;
+    color: #0f1111;
+    border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background: #f8f9fa;
+    border-color: #ffd64f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .success-container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .success-content {
+        padding: 30px 20px;
+    }
+
+    .success-content h1 {
+        font-size: 28px;
+    }
+
+    .success-message {
+        font-size: 16px;
+    }
+
+    .order-info {
+        padding: 20px;
+    }
+
+    .order-detail {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-content {
+        padding: 20px 15px;
+    }
+
+    .checkmark {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    .success-content h1 {
+        font-size: 24px;
+    }
+
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .order-item img {
+        width: 80px;
+        height: 80px;
+    }
+}

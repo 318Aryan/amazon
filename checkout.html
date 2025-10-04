@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Amazon</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./checkout.css">
+</head>
+<body>
+    <div class="loading-spinner" id="loadingSpinner"></div>
+
+    <nav>
+        <a href="/"><img src="./assets/amazon_logo.png" width="100" alt="Amazon Logo"></a>
+        <div class="nav-country">
+            <img src="./assets/location_icon.png" height="20" alt="Location">
+            <div>
+                <p>Deliver to</p>
+                <h1>United Kingdom</h1>
+            </div>
+        </div>
+        <div class="nav-search">
+            <div class="nav-search-category">
+                <p>All</p>
+                <img src="./assets/dropdown_icon.png" height="12" alt="Dropdown">
+            </div>
+            <input type="text" class="nav-search-input" placeholder="Search Amazon" aria-label="Search Amazon">
+            <button class="nav-search-icon" aria-label="Search">
+                <img src="./assets/search_icon.png" alt="Search">
+            </button>
+        </div>
+        <div class="nav-language">
+            <img src="./assets/us_flag.png" width="25px" alt="US Flag">
+            <p>EN</p>
+            <img src="./assets/dropdown_icon.png" width="8px" alt="Dropdown">
+        </div>
+        <div class="nav-texts">
+            <p><a href="/login.html">Hello, sign in</a></p>
+            <h1>Account & Lists <img src="./assets/dropdown_icon.png" width="8px" alt="Dropdown"> </h1>
+        </div>
+        <div class="nav-texts">
+            <p>Returns</p>
+            <h1>& Orders</h1>
+        </div>
+        <a href="/login.html" class="mobile-user-icon" style="display: none;">
+            <img src="./assets/user.png" alt="User">
+        </a>
+        <a href="/cart.html" class="nav-cart">
+            <img src="./assets/cart_icon.png" width="35px" alt="Cart">
+            <h4>Cart</h4>
+        </a>
+    </nav>
+
+    <div class="checkout-container">
+        <div class="checkout-left">
+            <div class="checkout-section">
+                <h2>1. Shipping Address</h2>
+                <form id="shippingForm" class="checkout-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">ZIP Code</label>
+                            <input type="text" id="zipCode" name="zipCode" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </form>
+            </div>
+
+            <div class="checkout-section">
+                <h2>2. Payment Method</h2>
+                <form id="paymentForm" class="checkout-form">
+                    <div class="payment-methods">
+                        <label class="payment-method">
+                            <input type="radio" name="paymentMethod" value="card" checked>
+                            <span class="payment-option">
+                                <img src="./assets/card_icon.png" alt="Card" width="30">
+                                Credit/Debit Card
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="card-details">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="cardName" name="cardName" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="checkout-section">
+                <h2>3. Review Your Order</h2>
+                <div id="orderSummary" class="order-summary">
+                    <!-- Order items will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-right">
+            <div class="order-summary-card">
+                <h3>Order Summary</h3>
+                <div id="orderDetails" class="order-details">
+                    <!-- Order details will be populated by JavaScript -->
+                </div>
+                <div class="order-total">
+                    <div class="total-line">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="total-line">
+                        <span>Shipping:</span>
+                        <span id="shipping">$0.00</span>
+                    </div>
+                    <div class="total-line">
+                        <span>Tax:</span>
+                        <span id="tax">$0.00</span>
+                    </div>
+                    <hr>
+                    <div class="total-line total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                </div>
+                <button id="placeOrderBtn" class="place-order-btn">Place Your Order</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <img src="./assets/amazon_logo.png" width="100" alt="Amazon Logo">
+        <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+
+    <script src="./auth.js"></script>
+    <script src="./productData.js"></script>
+    <script src="./checkout.js"></script>
+</body>
+</html>
